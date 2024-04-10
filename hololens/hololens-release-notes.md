@@ -31,7 +31,7 @@ In between our feature updates, we also release fixes and improvements and secur
 
 To help provide clarity, this release notes page provides information for every major and minor update. The most current release is listed first, and previous releases follow in chronological order. If you’d like to learn about updates to down level versions (or view previous major feature releases), refer to the table that follows.
 
-Note:  the current release version is the March 2024 Update, Build 1266.
+Note:  the current release version is the April 2024 Update, Build 1272.
 
 | Major release   number | Feature release name                  | Date         | Build number |
 |------------------------|-------------------------------------|--------------|--------------|
@@ -56,6 +56,14 @@ To explicitly check for updates, launch the Settings app and select **Update & S
 
 > [!TIP]
 > Searching for a feature but didn't find it on this page? Try checking out of the previous feature release pages. You can navigate there using the links above, or the table of contents.
+
+## Windows Holographic, version 23H2 - April 2024 Update
+
+- Build 22621.1272
+
+Improvements and fixes in the update:
+
+- Improved the reliability of Store App updates happening in the background.
 
 ## Windows Holographic, version 23H2 - March 2024 Update
 
