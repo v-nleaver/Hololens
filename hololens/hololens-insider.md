@@ -125,6 +125,8 @@ Any user on the device can still choose to run eye calibration at any time to im
 
 - Fixed an issue in Device Portal that would sometimes prevent the export of the spatial mapping database.
 
+- Modified the timing of when LOB App updates occur.  In the past, LOB App updates forced applications to shut down to complete an update.  Now, if an application is actively being used, the LOB App update will wait to perform the update until the application is not in use.
+
 ## Start receiving Insider builds
 
 This section explains the steps to prepare devices and then the steps to receive Insider builds.
