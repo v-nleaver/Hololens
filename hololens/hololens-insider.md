@@ -36,7 +36,7 @@ Looking for a new feature but don't see it? We released many new features as par
 
 | Feature   | Description  | User or scenario | Available in build |
 |-----------|--------------|---|---|
-|[OpenXR code update](#openxr-code-update)|In-box OpenXR code updated. | Developer | 113.2403.5001|
+|[OpenXR code update](#openxr-code-update)|In-box OpenXR code updated to version 113.2403.5001. | Developer | 10.0.22621.1316 |
 |[Shared Microsoft Entra accounts](#shared-microsoft-entra-accounts)|Shared Microsoft Entra (formerly Azure Active Directory) accounts on HoloLens are regular Microsoft Entra user accounts that can sign-in to the HoloLens without requiring any credentials. | IT Admin | 10.0.22621.1303|
 |[Policy to enable auto unlock](#policy-to-enable-auto-unlock)|Policy to control whether a user is prompted for credentials when returning to the device in suspended state. | IT Admin | 10.0.22621.1303|
 |[Collect and view network connectivity report](#collect-and-view-network-connectivity-report)|Network connectivity report is added to Offline Diagnostics to help users investigate network connectivity issues on HoloLens 2 devices. | All | 10.0.22621.1303|
@@ -48,7 +48,7 @@ Looking for a new feature but don't see it? We released many new features as par
 
 ### OpenXR Code Update
 
-The latest release of OpenXR provides the best out-of-box experience for customers without Microsoft store access.
+The latest release of OpenXR provides the best out-of-box experience for customers without Microsoft store access.  See [OpenXR Tools for Windows Mixed Reality - 113.2403.5001](https://github.com/microsoft/OpenXR-MixedReality/releases/tag/113.2403.5001) for more details on the release.
 
 ### Shared Microsoft Entra accounts
 
