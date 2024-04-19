@@ -36,6 +36,7 @@ Looking for a new feature but don't see it? We released many new features as par
 
 | Feature   | Description  | User or scenario | Available in build |
 |-----------|--------------|---|---|
+|[OpenXR code update](#openxr-code-update)|In-box OpenXR code updated to version 113.2403.5001. | Developer | 10.0.22621.1316 |
 |[Shared Microsoft Entra accounts](#shared-microsoft-entra-accounts)|Shared Microsoft Entra (formerly Azure Active Directory) accounts on HoloLens are regular Microsoft Entra user accounts that can sign-in to the HoloLens without requiring any credentials. | IT Admin | 10.0.22621.1303|
 |[Policy to enable auto unlock](#policy-to-enable-auto-unlock)|Policy to control whether a user is prompted for credentials when returning to the device in suspended state. | IT Admin | 10.0.22621.1303|
 |[Collect and view network connectivity report](#collect-and-view-network-connectivity-report)|Network connectivity report is added to Offline Diagnostics to help users investigate network connectivity issues on HoloLens 2 devices. | All | 10.0.22621.1303|
@@ -44,6 +45,10 @@ Looking for a new feature but don't see it? We released many new features as par
 |[Update to eye tracking calibration](#update-to-eye-tracking-calibration)|The option to perform eye tracking calibration is shown on the device even if it has been deployed via Autopilot. | All | 10.0.22621.1296|
 |[Policies to set device standby action](#policies-to-set-device-standby-action)|Policies allow the admin to execute supported actions in modern standby. | IT Admin | 10.0.22621.1286|
 |[Fixes and improvements](#fixes-and-improvements)  | Additional fixes and improvements for HoloLens. | All   | 10.0.22621.1205 |
+
+### OpenXR Code Update
+
+The latest release of OpenXR provides the best out-of-box experience for customers without Microsoft store access.  See [OpenXR Tools for Windows Mixed Reality - 113.2403.5001](https://github.com/microsoft/OpenXR-MixedReality/releases/tag/113.2403.5001) for more details on the release.
 
 ### Shared Microsoft Entra accounts
 
@@ -124,6 +129,8 @@ Any user on the device can still choose to run eye calibration at any time to im
 - Improved error handling when the wrong user credentials are supplied when using web sign in.
 
 - Fixed an issue in Device Portal that would sometimes prevent the export of the spatial mapping database.
+
+- Modified the timing of when LOB App updates occur.  In the past, LOB App updates forced applications to shut down to complete an update.  Now, if an application is actively being used, the LOB App update will wait to perform the update until the application is not in use.
 
 ## Start receiving Insider builds
 
