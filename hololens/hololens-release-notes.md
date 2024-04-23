@@ -41,7 +41,7 @@ Note:  the current release version is the April 2024 Update, Build 1272.
 | 18362                  | [Windows Holographic, version 1903](hololens-release-notes-1903.md#windows-holographic-version-1903---november-2019-update)   | Nov 2019     | 18362.1039   |
 
 > [!NOTE]
-> For UK Customers: The minimum security update period for HoloLens 2 is December 31, 2027 (for units purchased until December 2024). For units purchased after December 2024, the support period will be 3 years from date of purchase.
+> For UK Customers: For purposes of conformance with the UK Product Security and Telecommunications Infrastructure (PSTI) Act, the minimum security update period for HoloLens 2 is December 31, 2027 (for units purchased until December 2024). For units purchased after December 2024, the support period will be 3 years from date of purchase.
 
 ### How to find out which operating system version is on HoloLens?
 
