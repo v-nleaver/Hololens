@@ -32,7 +32,6 @@ In between our feature updates, we also release fixes and improvements and secur
 To help provide clarity, this release notes page provides information for every major and minor update. The most current release is listed first, and previous releases follow in chronological order. If you’d like to learn about updates to down level versions (or view previous major feature releases), refer to the table that follows.
 
 Note:  the current release version is the April 2024 Update, Build 1272.
-
 | Major release   number | Feature release name                  | Date         | Build number |
 |------------------------|-------------------------------------|--------------|--------------|
 | 22621| [Windows Holographic, version 23H2](#windows-holographic-version-23h2---october-2023-update) <br> [Windows Holographic, version 23H1](#windows-holographic-version-23h1---june-2023-update)  | October 2023  <br> June 2023   | 22621.1244  <br> 22621.1113 |
@@ -40,8 +39,9 @@ Note:  the current release version is the April 2024 Update, Build 1272.
 | 19041                  | [Windows Holographic, version 20H2](hololens-release-notes-2004.md#windows-holographic-version-20h2) <br> [Windows Holographic, version 2004](hololens-release-notes-2004.md#windows-holographic-version-2004) | Nov 2020 <br> May 2020    | 19041.1128 <br> 19041.1103  |
 | 18362                  | [Windows Holographic, version 1903](hololens-release-notes-1903.md#windows-holographic-version-1903---november-2019-update)   | Nov 2019     | 18362.1039   |
 
-> [!NOTE]
-> For UK Customers: For purposes of conformance with the UK Product Security and Telecommunications Infrastructure (PSTI) Act, the minimum security update period for HoloLens 2 is December 31, 2027 (for units purchased until December 2024). For units purchased after December 2024, the support period will be 3 years from date of purchase.
+#### UK PSTI Conformity 
+
+For purposes of conformance with the UK Product Security and Telecommunications Infrastructure (PSTI) Act, the minimum security update period for HoloLens 2 is December 31, 2027 (for units purchased until December 2024). For units purchased after December 2024, the support period will be 3 years from date of purchase.
 
 ### How to find out which operating system version is on HoloLens?
 
