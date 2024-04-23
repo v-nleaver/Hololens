@@ -40,6 +40,9 @@ Note:  the current release version is the April 2024 Update, Build 1272.
 | 19041                  | [Windows Holographic, version 20H2](hololens-release-notes-2004.md#windows-holographic-version-20h2) <br> [Windows Holographic, version 2004](hololens-release-notes-2004.md#windows-holographic-version-2004) | Nov 2020 <br> May 2020    | 19041.1128 <br> 19041.1103  |
 | 18362                  | [Windows Holographic, version 1903](hololens-release-notes-1903.md#windows-holographic-version-1903---november-2019-update)   | Nov 2019     | 18362.1039   |
 
+> [!NOTE]
+> For UK Customers: The minimum security update period for HoloLens 2 is December 31, 2027 (for units purchased until December 2024). For units purchased after December 2024, the support period will be 3 years from date of purchase.
+
 ### How to find out which operating system version is on HoloLens?
 
 To check what version your HoloLens is on, open the Settings app and select **System** -> **About** (depending on how significant your window is you may need to scroll down to the bottom to see the About page.)
