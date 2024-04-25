@@ -261,7 +261,7 @@ After taking an OS update, users may still see the [update indicator](hololens-r
 
 ### Workaround for update indicator
 
-The update indicator menu will correct itself.  No further action is required.
+In most cases, the update indicator menu will correct itself within one hour.  No further action is required. It is best to allow the update indicator time to clear on its own, before rebooting the device. If the issue does not resolve itself after one or two days, reflash the device.
 
 ## Resetting a device with low space doesn't reset
 
