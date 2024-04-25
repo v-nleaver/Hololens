@@ -24,7 +24,7 @@ This article describes how to resolve several common HoloLens issues.
 ##### Fixed Known Issues
 
 - [**Fixed** - Swipe to type on the virtual keyboard was not working correctly](#fixed---swipe-to-type-on-the-virtual-keyboard-was-not-working-correctly)
-- [**Fixed** - Users opting in to Windows Insider after flashing to 23H1 will be stuck](#fixed---users-opting-in-to-windows-insider-after-flashing-to-23h1-will-be-stuck)
+- [**Fixed** - Users opting in to Windows Insider after flashing to 23H1 are stuck](#fixed---users-opting-in-to-windows-insider-after-flashing-to-23h1-are-stuck)
 - [**Fixed** - HoloLens user can’t launch Microsoft Edge](#fixed---hololens-user-cant-launch-microsoft-edge)
 - [**Fixed** - Every time the power goes to 18 percent, the device suddenly shuts down automatically](#fixed---every-time-the-power-goes-to-18-percent-the-device-suddenly-shuts-down-automatically)
 - [**Fixed** - OneDrive UWP app doesn't work for Microsoft Entra users](#fixed---onedrive-uwp-app-doesnt-work-for-azure-ad-users)
@@ -55,7 +55,7 @@ This article describes how to resolve several common HoloLens issues.
 
 ##### General
 
-- [HoloLens is unresponsive or won't start](#hololens-is-unresponsive-or-wont-start)
+- [HoloLens is unresponsive or doesn't start](#hololens-is-unresponsive-or-wont-start)
 - ["Low Disk Space" error](#low-disk-space-error)
 - [Calibration Fails](#calibration-fails)
 - [Can't sign in because my HoloLens was previously set up for someone else](#cant-sign-in-because-my-hololens-was-previously-set-up-for-someone-else)
@@ -82,7 +82,7 @@ This article describes how to resolve several common HoloLens issues.
 
 The swipe-to-type feature on the virtual keyboard was not working correctly, and affected Windows 11 builds only.  This issue was fixed in the Windows Holographic, version 23H2 - November 2023 Update with Build 22621.1152.
 
-## **Fixed** - Users opting in to Windows Insider after flashing to 23H1 will be stuck
+## **Fixed** - Users opting in to Windows Insider after flashing to 23H1 are stuck
 
 > [!NOTE] 
 > This was fixed in the [Windows Holographic, version 23H2 - November 2023 Update](/hololens/hololens-release-notes#windows-holographic-version-23h2---november-2023-update)
@@ -111,9 +111,9 @@ If you've having an issue launching Microsoft Edge on your HoloLens, you may hav
 > [!NOTE]
 > This was fixed in [Windows Holographic, version 21H2 - November 2021 Update](hololens-release-notes.md#windows-holographic-version-21h2---november-2021-update)
 
-A known issue is that when the device reaches 18% battery, it will shut down unexpectedly. This is a software issue, not a hardware or battery issue, so don't exchange devices for this. If you're unsure if your issue matches this bug, please:
+A known issue is that when the device reaches 18% battery, it shuts down unexpectedly. This behavior is a software issue, not a hardware or battery issue, so don't exchange devices for this. If you're unsure if your issue matches this bug, try one of the following suggestions:
 
-1. Ensure optional diagnostics are enabled on your device(s)
+1. Ensure optional diagnostics are enabled on your devices
 1. Reproduce the problem
 1. Submit a [Feedback Hub](hololens-feedback.md) issue
 1. Share the Feedback issue URL
@@ -130,16 +130,16 @@ A known issue is that when the device reaches 18% battery, it will shut down une
 > Follow these [instructions to update your OneDrive app.](holographic-store-apps.md#update-apps) You can check which version of OneDrive you have by using the Microsoft Store app, then select the "See more" button represented by the **...** then select **Downloads and updates**.
 > 
 
-If you use OneDrive For Business using your Microsoft Entra account, you may have encountered an error when signing into your inbox OneDrive app. Not being able to sign into the OneDrive app doesn’t affect automatic uploads of images and videos captured by the Camera app. Your files can still be saved and accessed from the OneDrive for Business cloud storage.
+If you use OneDrive For Business using your Microsoft Entra account, you may encounter an error when signing into your inbox OneDrive app. Not being able to sign into the OneDrive app doesn’t affect automatic uploads of images and videos captured by the Camera app. Your files can still be saved and accessed from the OneDrive for Business cloud storage.
 
 ### Workarounds
 
 Prerequisite: Customers can use Microsoft Edge and device OS is update to a Windows Holographic, 21H1 build or newer.
 
-If you're experiencing this issue, try one of the following:
+If you're experiencing this issue, try one of the following suggestions:
 
 - Users can directly access OneDrive For Business from Microsoft Edge, and interact with their files the website from their browser.
-- Users can install the OneDrive PWA app to HoloLens by downloading it from Microsoft Edge. This will allow users to view and manage files on the device again. Read and follow these [instructions for installing the OneDrive PWA app on your HoloLens.](holographic-store-apps.md#install-microsoft-onedrive-pwa-app)
+- Users can install the OneDrive PWA app to HoloLens by downloading it from Microsoft Edge. This app allows users to view and manage files on the device again. Read and follow these [instructions for installing the OneDrive PWA app on your HoloLens.](holographic-store-apps.md#install-microsoft-onedrive-pwa-app)
 
 [Back to list](#list)
 
@@ -151,7 +151,7 @@ If you're experiencing this issue, try one of the following:
 > [!NOTE]
 > Due to this Known Issue's severity we had temporarily paused the availability of Windows Holographic, version 21H1. The 21H1 build is now available again, so devices may once again be updated to the latest 21H1 build.
 
-On the latest release of [Windows Holographic, version 21H1](hololens-release-notes.md#windows-holographic-version-21h1), some users of Remote Assist have experienced video freezing during calls over 20 minutes. This is a **known issue**.
+On the latest release of [Windows Holographic, version 21H1](hololens-release-notes.md#windows-holographic-version-21h1), some users of Remote Assist experienced video freezing during calls over 20 minutes. This behavior is a **known issue**.
 
 ### Workarounds to fix Remote Assist
 
@@ -159,7 +159,7 @@ If you're unable to update Remote Assist to a newer build, try the following wor
 
 #### Restart in between calls
 
-If your calls are going over a length of 20 minutes and you're experiencing this issue, try rebooting your device. Rebooting your device between Remote Assist calls will refresh your device and put it back into a good state.
+If your calls are going over a length of 20 minutes and you're experiencing this issue, try rebooting your device. Rebooting your device between Remote Assist calls refreshes your device and put it back into a good state.
 
 To quickly restart a device on [Windows Holographic, version 21H1](hololens-release-notes.md#windows-holographic-version-21h1) open the start menu, and select the user icon, then select **Restart**.
 
@@ -179,13 +179,13 @@ In previous builds of Windows Holographic, when attempting to download a locked 
 > [!NOTE]
 > This is a **known issue** that was fixed in [Windows Holographic, version 21H1 - July 2021 Update](hololens-release-notes.md#windows-holographic-version-21h1---july-2021-update). If you previously disabled SSL Connection as part of the workaround, we highly recommend you re-enable it.
 
-Some customers have found, when attempting to upload or download files, the operation might appear to hang and then time out or never complete. This is separate from the '[file locked' known issue](#fixed---downloading-locked-files-doesnt-error) -- this affects Windows Holographic, versions 2004, 20H2 and 21H1 in-market builds. The problem has been root caused to a bug in Device Portal's handling of certain requests, and is most consistently hit when using https, which is the default.
+Some customers find, when attempting to upload or download files, the operation might appear to hang and then time out or never complete. This behavior is separate from the '[file locked' known issue](#fixed---downloading-locked-files-doesnt-error) -- this affects Windows Holographic, versions 2004, 20H2 and 21H1 in-market builds. The problem has been root caused to a bug in Device Portal's handling of certain requests, and is most consistently hit when using https, which is the default.
 
 ### Workaround for device portal time out
 
 This workaround, which applies equally to Wi-Fi and UsbNcm, is to disable the "required" option under "SSL Connection". To do so, navigate to Device Portal, **System**, and select the **Preferences** page. In the **Device Security** section, locate **SSL Connection**, and uncheck to disable **Required**.
 
-The user should then go to http://, not https:// (IP address) and features like file upload and download will work.
+The user should then go to http://, not https:// (IP address) and features like file upload and download work.
 
 [Back to list](#list)
 
@@ -371,7 +371,7 @@ For more info, please refer to [troubleshooting steps on the autopilot page.](ho
 
 Some users may experience the Microsoft Store working not as expected, and see the error code 0x80131500. This is an issue caused by the region set on the HoloLens not being available in the Microsoft Store app on HoloLens. If you encounter error code 0x80131500, to work around:
 
-1. Set Settings > Time & Language > Region > Country or region, to one of the following:
+1. Set Settings > Time & Language > Region > Country or region, to one of the following options:
     - United States, Japan, Germany, Canada, United Kingdom, Ireland, France, Australia, New Zealand.
 1. Restart the Store app.
 1. For the whole device to reflect the change, the device will need to be restarted.
