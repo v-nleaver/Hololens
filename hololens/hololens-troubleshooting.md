@@ -179,7 +179,7 @@ In previous builds of Windows Holographic, when attempting to download a locked 
 > [!NOTE]
 > This is a **known issue** that was fixed in [Windows Holographic, version 21H1 - July 2021 Update](hololens-release-notes.md#windows-holographic-version-21h1---july-2021-update). If you previously disabled SSL Connection as part of the workaround, we highly recommend you re-enable it.
 
-Some customers find, when attempting to upload or download files, the operation might appear to hang and then time out or never complete. This behavior is separate from the '[file locked' known issue](#fixed---downloading-locked-files-doesnt-error) -- this affects Windows Holographic, versions 2004, 20H2 and 21H1 in-market builds. The problem has been root caused to a bug in Device Portal's handling of certain requests, and is most consistently hit when using https, which is the default.
+Some customers find, when attempting to upload or download files, the operation might appear to hang and then time out or never complete. This behavior is separate from the '[file locked' known issue](#fixed---downloading-locked-files-doesnt-error) -- this affects Windows Holographic, versions 2004, 20H2 and 21H1 in-market builds. The problem was root caused to a bug in Device Portal's handling of certain requests.  THe issue is hit most consistently when using https, which is the default.
 
 ### Workaround for device portal time out
 
@@ -191,7 +191,7 @@ The user should then go to http://, not https:// (IP address) and features like 
 
 ## **Fixed** - OneDrive doesn't automatically upload pictures
 
-The OneDrive app for HoloLens doesn't support automatic camera upload for work or school accounts. This **known issue** has been fixed.  For more information on automatically uploading your mixed reality photos and videos for work or school account, see [Share your mixed reality photos and videos](holographic-photos-and-videos.md#share-your-mixed-reality-photos-and-videos).
+The OneDrive app for HoloLens doesn't support automatic camera upload for work or school accounts. This **known issue** is fixed.  For more information on automatically uploading your mixed reality photos and videos for work or school account, see [Share your mixed reality photos and videos](holographic-photos-and-videos.md#share-your-mixed-reality-photos-and-videos).
 
 Workarounds before the fix:
 
@@ -203,7 +203,7 @@ Workarounds before the fix:
 
 ## Users may be unable to cleanup temporary files completely
 
-Some temp files will not be able to be cleaned up completely.  Users will not be able to free up all temporary files via the Storage setting page in the Settings app.
+Some temp files are not cleaned up completely.  Users are not able to free up all temporary files via the Storage setting page in the Settings app.
 
 ## Sometimes the Store app won't open after an OS update
 
@@ -225,12 +225,12 @@ Users who update from Windows 10 to Windows 11 may experience an issue trying to
 
 ## After successful network connection users may receive incorrect error regarding internet connectivity during initial device setup
 
-Older HoloLens devices that have never gone through initial device setup may display an incorrect error when they are ultimately setup for the first time. The error will indicate "You need internet for this..." even though a successful network connection was already established. This error will prevent the completion of the device setup process.
+Older HoloLens devices that have never gone through initial device setup may display an incorrect error when they are ultimately setup for the first time. The error indicates "You need internet for this..." even though a successful network connection was already established. This error prevents the completion of the device setup process.
 
-The workaround for this issue is to [download the latest build and reflash the device](/hololens/hololens-recovery#clean-reflash-the-device), and then proceed with the initial device setup process. This will allow the device to acquire a datetime that is within the threshold required during initial device setup.
+The workaround for this issue is to [download the latest build and reflash the device](/hololens/hololens-recovery#clean-reflash-the-device), and then proceed with the initial device setup process. This practice allows the device to acquire a datetime that is within the threshold required during initial device setup.
 
 > [!NOTE] 
-> If the device is registered for Autopilot, this error will not occur because Autopilot automatically forces a datetime sync.
+> If the device is registered for Autopilot, this error does not occur because Autopilot automatically forces a datetime sync.
 
 ## Sometimes Settings app won't open after update
 
@@ -253,19 +253,19 @@ Alternatively, users can follow these steps to fix the Settings app:
     1. If small deployment/single device, copy appx to device (USB drive or MTP), click on the appx from File Explorer.
 
 
-    1. If large deployment with MDM, deploy the appx as a LOB app through MDM. There’s no need for additional licenses or certificates.
+    1. If large deployment with MDM, deploy the appx as a LOB app through MDM. There’s no need for more licenses or certificates.
 
 ## Update indicator may still be visible after OS update
 
-After taking an OS update, users may still see the [update indicator](hololens-release-notes.md#update-indicator) menu even though there is no additional update available.
+After taking an OS update, users may still see the [update indicator](hololens-release-notes.md#update-indicator) menu even though there is no other update available.
 
 ### Workaround for update indicator
 
-In most cases, the update indicator menu will correct itself within one hour.  No further action is required. It is best to allow the update indicator time to clear on its own, before rebooting the device. If the issue does not resolve itself after one or two days, reflash the device.
+In most cases, the update indicator menu corrects itself within one hour.  No further action is required. It is best to allow the update indicator time to clear on its own, before rebooting the device. If the issue does not resolve itself after one or two days, reflash the device.
 
 ## Resetting a device with low space doesn't reset
 
-When resetting a device that has low disk space, under 6 GB of free space, the user will find that it fails to reset. Instead it will start the restart process but fail to complete, resulting in the user needing to reflash the device to use it again.
+When resetting a device that has low disk space, under 6 GB of free space, the user finds that it fails to reset. Instead it starts the restart process but fail to complete, resulting in the user needing to reflash the device to use it again.
 
 ### Who is affected - Low space reset
 
@@ -280,22 +280,22 @@ When resetting a device that has low disk space, under 6 GB of free space, the u
 
 ### Workaround - Low space reset
 
-- Delete files or apps until you have more than 6 GB of free storage space on the device. You can check free space via **Settings** -> **System** -> **Storage**. While there you can enable or run storage sense to help you clear up space more easily.
-- [Reflash the device using manual flashing mode](hololens-recovery.md#manual-flashing-mode-procedure). This can be done to either bypass making free space, or to recover from the bad state created by resetting with low space.
+- Delete files or apps until you have more than 6 GB of free storage space on the device. You can check free space via **Settings** -> **System** -> **Storage**. While there, you can enable or run storage sense to help you clear up space more easily.
+- [Reflash the device using manual flashing mode](hololens-recovery.md#manual-flashing-mode-procedure). This step can be done to either bypass making free space, or to recover from the bad state created by resetting with low space.
 
 ## Remote Wipe doesn't remove device from Intune
 
-When deleting a HoloLens device from Intune [via the Wipe command](hololens-recovery.md#wipe-the-device), the device will be sent the wipe command. This command will wipe the device, however Intune won't receive confirmation that the HoloLens was wiped. This will leave the Wipe button as clicked, and "Wipe pending..." for the device.
+When deleting a HoloLens device from Intune [via the Wipe command](hololens-recovery.md#wipe-the-device), the device is sent the wipe command. While this command wipes the device, Intune won't receive confirmation that the HoloLens was wiped. This inconsistency leaves the Wipe button as clicked, and "Wipe pending..." for the device.
 
 ![Wipe pending](./images/wipe-pending.jpg)
 
 ### Workaround for remote wipe
 
-Immediately after selecting **Wipe** we suggest also selecting the **Delete** button next to wipe. Otherwise you'll have left over device objects or even see another known issue for [Autopilot](#why-do-i-see-0x80180014-during-autopilot).
+Immediately after selecting **Wipe** we suggest also selecting the **Delete** button next to wipe. Otherwise,device objects may remain or another known issue may arise for [Autopilot](#why-do-i-see-0x80180014-during-autopilot).
 
 ## Devices not getting the latest feature updates
 
-You may have noticed that your devices are updating but not updating to the latest feature releases. If your device version is newer than 19041.1146, but the major build number is still 19041 then you’re still on an older servicing train.
+You may notice that your devices are updating but not updating to the latest feature releases. If your device version is newer than 19041.1146, but the major build number is still 19041 then you’re still on an older servicing train.
 
 ### Symptom
 
@@ -303,7 +303,7 @@ Devices keep receiving servicing updates instead of FE updates.
 
 ### Who does this affect
 
-Users who have used “Feature updates for Windows 10 and later” instead of “Update rings for Windows 10 and later” to manage their devices.
+Users who use “Feature updates for Windows 10 and later” instead of “Update rings for Windows 10 and later” to manage their devices.
 
 ![Feature update bad selection](./images/endpoint-update-select.png)
 
@@ -313,7 +313,7 @@ Users who didn't try to use “Feature updates for Windows 10 and later” to ma
 
 ### How to check if devices are subject to Intune feature update management, and how to opt out
 
-You'll need your Microsoft Entra tenant ID. Here's [how to find your Microsoft Entra tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
+You need your Microsoft Entra tenant ID. Here's [how to find your Microsoft Entra tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
 
 1. Use Get azureADDevice beta Graph API to check against the Microsoft Entra device to determine if it's enrolled to update management.
 
@@ -359,13 +359,13 @@ You'll need your Microsoft Entra tenant ID. Here's [how to find your Microsoft E
 }
 ```
 
-3. Once the device is unenrolled then use Get azureADDevice or List azureADDevice resources to check if the device has been unenrolled successfully.
+3. Once the device is unenrolled then use Get azureADDevice or List azureADDevice resources to check if the device has unenrolled successfully.
 
 ## Why do I see 0x80180014 during Autopilot?
 
-This error is typically encountered during device reset and reuse flows where a HoloLens device has gone through Autopilot at least once. In order to resolve this issue, please [delete the device from Microsoft Intune](/mem/autopilot/troubleshoot-device-enrollment#error-code-0x80180014-when-re-enrolling-using-self-deployment-or-pre-provisioning-mode) and reset it again to complete Autopilot flow.
+This error is typically encountered during device reset and reuse flows where a HoloLens device goes through Autopilot at least once. In order to resolve this issue, [delete the device from Microsoft Intune](/mem/autopilot/troubleshoot-device-enrollment#error-code-0x80180014-when-re-enrolling-using-self-deployment-or-pre-provisioning-mode) and reset it again to complete Autopilot flow.
 
-For more info, please refer to [troubleshooting steps on the autopilot page.](hololens2-autopilot.md#issue---mdm-enrollment-fails-with-error-0x80180014-error-code-during-autopilot)
+For more info, refer to [troubleshooting steps on the autopilot page.](hololens2-autopilot.md#issue---mdm-enrollment-fails-with-error-0x80180014-error-code-during-autopilot)
 
 ## Microsoft Store error code 0x80131500
 
@@ -374,7 +374,7 @@ Some users may experience the Microsoft Store working not as expected, and see t
 1. Set Settings > Time & Language > Region > Country or region, to one of the following options:
     - United States, Japan, Germany, Canada, United Kingdom, Ireland, France, Australia, New Zealand.
 1. Restart the Store app.
-1. For the whole device to reflect the change, the device will need to be restarted.
+1. For the whole device to reflect the change, the device needs to be restarted.
 
 The HoloLens team is working on adding support for more regions.
 
@@ -382,7 +382,7 @@ See here [for countries or regions to buy HoloLens 2.](hololens2-purchase.md)
 
 ## File Explorer and pickers can't select OneDrive
 
-There have been some changes and updates to the OneDrive app over time. If you were previously using the File Explorer, or a file picker app to select files from OneDrive, you'll find this is no longer available since the [previously fixed OneDrive UWP app issue](#fixed---onedrive-uwp-app-doesnt-work-for-azure-ad-users). This is because the new app doesn't register itself as a file picker or share target.
+There were changes and updates to the OneDrive app over time. If you were previously using the File Explorer, or a file picker app to select files from OneDrive, you find this is no longer available since the [previously fixed OneDrive UWP app issue](#fixed---onedrive-uwp-app-doesnt-work-for-azure-ad-users). This issue is because the new app doesn't register itself as a file picker or share target.
 
 **Work around** : Use the OneDrive app and move files locally to the device as needed.
 
@@ -390,7 +390,7 @@ For code samples using OneDrive via Microsoft Graph APIs, visit the [developer d
 
 ## Microsoft Edge fails to start the microphone
 
-When users using Microsoft Edge the microphone can fail to start, thus not being usable to interact with Microsoft Edge in HoloLens. This known issue is related to the version of the Microsoft Edge app, please don't reflash your device to an earlier version as this won't fix this issue.
+When users using Microsoft Edge the microphone can fail to start, thus not being usable to interact with Microsoft Edge in HoloLens. This known issue is related to the version of the Microsoft Edge app.  Don't reflash your device to an earlier version as this doesn't fix this issue.
 
 ### Who is affected?
 
@@ -399,13 +399,13 @@ You can check which version of Microsoft Edge you have by using the Microsoft St
 
 ### Work around
 
-The current fix is in version 96, which is available to users who have enrolled in Microsoft Edge Insiders. This is different than enrolling your device as a Windows Insider. Read these instructions for details on [how to enroll into Microsoft Edge’s insider program.](hololens-new-edge.md#microsoft-edge-insider-channels)
+The current fix is in version 96, which is available to users who have enrolled in Microsoft Edge Insiders. This fix is different than enrolling your device as a Windows Insider. Read these instructions for details on [how to enroll into Microsoft Edge’s insider program.](hololens-new-edge.md#microsoft-edge-insider-channels)
 
 ## Auto-login asks for log-in
 
-A HoloLens 2 device can be configured to automatically log in through **Settings** -> **Accounts** -> **Sign-in Options** -> and under **Required** setting the value to **Never**. Some users may be required to log in to the device again during a substantially large update, such as a feature update. This is a **known issue**.
+A HoloLens 2 device can be configured to automatically log in through **Settings** -> **Accounts** -> **Sign-in Options** -> and under **Required** setting the value to **Never**. Some users may be required to log in to the device again during a substantially large update, such as a feature update. This behavior is a **known issue**.
 
-Example of when this could occur:
+Example of when this behavior could occur:
 
 - Updating a device from Windows Holographic, version 2004 (Build 19041.xxxx) to Windows Holographic, version 21H1 (Build 20346.xxxx)
 - Updating a device to take a large update on the same major build, for example, Windows Holographic, version 2004 to Windows Holographic, version 20H2
@@ -424,11 +424,11 @@ Work around methods:
 
 ## Some users may encounter an update failure with Insider build 20346.1466
 
-If a user has taken an update to the Insider flight, 20346.1466, and it doesn’t appear to be finishing the boot, a clean reflash may be required to move forward again. To see if you’ve encountered this:
+If a user takes an update to the Insider flight, 20346.1466, and it doesn’t appear to be finishing the boot, a clean reflash may be required to move forward again. To see if you encounter this behavior:
 
 1. Reboot – Hold down the power until the LED’s step down.
 1. Power up.
-1. Confirm you see the Windows flag at the beginning of the boot and it goes black shortly after that.
+1. Confirm you see the Windows flag at the beginning of the boot and it goes black shortly after that view.
 1. Connect your HoloLens2 to your PC with USB and run Advanced Recovery companion.
 1. Select the HoloLens.
 1. If the version says you’re running the 20346.1466 build, you likely hit this issue.
@@ -439,7 +439,7 @@ Users who have been using their device without flashing it since [Windows Hologr
 
 ### Users who are typically unaffected
 
-Users who have flashed their device, or unboxed their device, and started using it since [Windows Holographic, version 21H1](hololens-release-notes.md#windows-holographic-version-21h1).
+Users who flash their device, or unbox their device, and start using it since [Windows Holographic, version 21H1](hololens-release-notes.md#windows-holographic-version-21h1).
 
 ### Workaround for Insider update issue
 
@@ -448,22 +448,22 @@ Users who have flashed their device, or unboxed their device, and started using 
 ## Microsoft Edge fails to launch
 
 > [!NOTE]
-> This issue was originally created with the shipping version of Microsoft Edge in-mind. This issue may be resolved in the [new Microsoft Edge](hololens-new-edge.md). If it is not, please file feedback.
+> This issue was originally created with the shipping version of Microsoft Edge in-mind. This issue may be resolved in the [new Microsoft Edge](hololens-new-edge.md). If it is not, file feedback.
 
-A few customers have reported an issue where Microsoft Edge fails to launch. For these customers, the issue persists through reboot and isn't resolved with Windows or application updates. If you're experiencing this issue and you've confirmed [Windows is up-to-date](hololens-updates.md#manually-check-for-updates), please file a bug from the [Feedback Hub app](hololens-feedback.md) with the following category and subcategory: Install and Update > Downloading, installing, and configuring Windows Update.
+A few customers report an issue where Microsoft Edge fails to launch. For these customers, the issue persists through reboot and isn't resolved with Windows or application updates. If you're experiencing this issue and you confirm [Windows is up-to-date](hololens-updates.md#manually-check-for-updates), file a bug from the [Feedback Hub app](hololens-feedback.md) with the following category and subcategory: Install and Update > Downloading, installing, and configuring Windows Update.
 
-There are no known workarounds as we've been unable to root cause the issue so far. Filing a bug via Feedback Hub will help our investigation! This is a **known issue**.
+There are no known workarounds as we've been unable to root cause the issue so far. Filing a bug via Feedback Hub helps our investigation! This problem is a **known issue**.
 
 [Back to list](#list)
 
 ## Keyboard doesn't switch to special characters
 
-There's an issue during OOBE, where once the user has chosen a work or school account and is entering their password, trying to switch to the special characters on the keyboard by tapping the &123 button doesn't change to special characters. This is a **known issue**.
+There's an issue during OOBE that occurs when the user has chosen a work or school account and is entering their password.  If they try to to switch to the special characters on the keyboard by tapping the &123 button, it doesn't change to special characters. This is a **known issue**.
 
 Work-arounds:
 
 - Close the keyboard and reopen it by tapping the text field.
-- Incorrectly enter your password. When the keyboard is relaunched next time, it will then work as expected.
+- Incorrectly enter your password. When the keyboard is relaunched next time, it then works as expected.
 - Web Authentication, close the keyboard and select **Sign in from another device**.
 - If entering only numbers, a user may press and hold certain keys to open an expanded menu.
 - Using a USB keyboard.
@@ -476,13 +476,13 @@ This doesn't affect:
 
 ## Blue screen after unenrolling from Insider preview on a device flashed with an Insider build
 
-This is an issue affecting that affects users who are were on an Insider preview build, reflashed their HoloLens 2 with a new insider preview build, and then unenrolled from the Insider program. This is a **known issue**.
+This behavior is an issue affecting that affects users who are were on an Insider preview build, reflashed their HoloLens 2 with a new insider preview build, and then unenrolled from the Insider program. This behavior is a **known issue**.
 
-This doesn't affect:
+This behavior doesn't affect:
 
 - Users who aren't enrolled in Windows Insider
 - Insiders:
-  - If a device has been enrolled since Insider builds were version 18362.x
+  - If a device is enrolled since Insider builds were version 18362.x
   - If they flashed an Insider signed 19041.x build AND stay enrolled in the Insider program
 
 Work-around:
@@ -502,7 +502,7 @@ Work-around:
 
 ## HoloLens is unresponsive or won't start
 
-If your HoloLens won't start:
+If your HoloLens doesn't start:
 
 - If the LEDs next to the power button don't light up, or only one LED briefly blinks, you may need to [charge your HoloLens.](hololens2-charging.md#charging-the-device)
 - If the LEDs light up when you press the power button but you can't see anything on the displays, [do a hard reset of the device](hololens-recovery.md#hard-restart-procedure).
@@ -517,10 +517,10 @@ If these steps don't work, you can try [recovering your HoloLens 2 device](holol
 
 ## "Low Disk Space" error
 
-You'll need to free up some storage space by doing one or more of the following:
+You need to free up some storage space by doing one or more of the following actions:
 
 - Delete some unused spaces. Go to **Settings** > **System** > **Spaces**, select a space that you no longer need, and then select **Remove**.
-- Remove some of the holograms that you've placed.
+- Remove some of the holograms that you placed.
 - Delete some pictures and videos from the Photos app.
 - Uninstall some apps from your HoloLens. In the **All apps** list, tap and hold the app you want to uninstall, and then select **Uninstall**.
 
@@ -552,7 +552,7 @@ If you followed all guidelines and calibration is still failing, you can disable
 
 Also see related information for [image color or brightness troubleshooting.](hololens2-fit-comfort-faq.md#hologram-image-color-or-brightness-does-not-look-right)
 
-Setting IPD isn't applicable for HoloLens 2, since eye positions are computed by the system.
+Setting IPD isn't applicable for HoloLens 2, since the system computes eye positions.
 
 [Back to list](#list)
 
@@ -573,7 +573,7 @@ You can [put the device into **Flashing Mode** and use Advanced Recovery Compani
 
 - The Live Preview feature in Mixed Reality capture may exhibit several seconds of latency.
 
-- On the Virtual Input page, the Gesture and Scroll controls under the Virtual Gestures section aren't functional. Using them will have no effect. The virtual keyboard on the virtual input page works correctly.
+- On the Virtual Input page, the Gesture and Scroll controls under the Virtual Gestures section aren't functional. Using them has no effect. The virtual keyboard on the virtual input page works correctly.
 
 - After enabling Developer Mode in Settings, it may take a few seconds before the switch to turn on the Device Portal is enabled.
 
@@ -593,7 +593,7 @@ Information about the HoloLens emulator is located in our developer documentatio
 
 If Cortana isn't responding to your voice commands, make sure Cortana is turned on. On the All apps list, select **Cortana** > **Menu** > **Notebook** > **Settings** to make changes. To learn more about what you can say, see [Use your voice with HoloLens](hololens-cortana.md).
 
-On HoloLens (1st gen), built-in speech recognition isn't configurable. It's always turned on. On HoloLens 2, you can choose whether to turn on both speech recognition and Cortana during device setup.
+On HoloLens (1st gen), built-in speech recognition isn't configurable. It's always on. On HoloLens 2, you can choose whether to turn on both speech recognition and Cortana during device setup.
 
 If your HoloLens 2 isn't responding to your voice, make sure Speech recognition is turned on. Go to **Start** > **Settings** > **Privacy** > **Speech** and turn on **Speech recognition**.
 
@@ -608,7 +608,7 @@ To ensure that HoloLens can see your hands, you need to keep them in the gesture
 
 Many immersive apps follow input patterns that are similar to Mixed Reality Home.  Learn more about using hand input on [HoloLens (1st gen)](hololens1-basic-usage.md#use-hololens-with-your-hands) and [HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame).
 
-If you're wearing gloves, note that some types of gloves don't work with hand tracking.  A common example is black rubber gloves, which tend to absorb infrared light and aren't picked up by the depth camera.  If your work involves rubber gloves, we recommend trying a lighter color such as blue or gray.  Another example is large baggy gloves, which tend to obscure the shape of your hand. We recommend using gloves that are as form-fitting as possible for best results.
+If you're wearing gloves, some types of gloves don't work with hand tracking.  A common example is black rubber gloves, which tend to absorb infrared light and the depth camera doesn't pick them up.  If your work involves rubber gloves, we recommend trying a lighter color such as blue or gray.  Another example is large baggy gloves, which tend to obscure the shape of your hand. We recommend using gloves that are as form-fitting as possible for best results.
 
 If your visor has fingerprints or smudges, use the microfiber cleaning cloth that came with the HoloLens to clean your visor gently.
 
@@ -637,7 +637,7 @@ If you're having problems [pairing a Bluetooth device](hololens-connect-devices.
 
 ## USB-C Microphone isn't working
 
-Be aware that some USB-C microphones incorrectly report themselves as both a microphone *and* a speaker. This is a problem with the microphone and not with HoloLens. When plugging one of these microphones into HoloLens, sound may be lost. Fortunately there's a simple fix.  
+Some USB-C microphones incorrectly report themselves as both a microphone *and* a speaker. This occurrence is a problem with the microphone and not with HoloLens. When plugging one of these microphones into HoloLens, sound may be lost. Fortunately there's a simple fix.  
 
 In **Settings** -> **System** -> **Sound**, explicitly set the built-in speakers **(Analog Feature Audio Driver)** as the **Default device**. HoloLens should remember this setting even if the microphone is removed and reconnected later.
 
@@ -649,9 +649,9 @@ HoloLens (1st gen) doesn't support Bluetooth audio profiles. Bluetooth audio dev
 
 HoloLens 2 supports the Bluetooth A2DP audio profile for stereo playback. The Bluetooth Hands Free profile that enables microphone capture from a Bluetooth peripheral isn't supported on HoloLens 2.
 
-If you're having trouble using a Bluetooth device, make sure that it's a supported device. Supported devices include the following:
+If you're having trouble using a Bluetooth device, make sure that it's a supported device. Supported devices include the following list:
 
-- English-language QWERTY Bluetooth keyboards (you can use these anywhere that you use the holographic keyboard).
+- English-language QWERTY Bluetooth keyboards (you can use these keyboards anywhere that you use the holographic keyboard).
 - Bluetooth mice.
 - The [HoloLens clicker](hololens1-clicker.md).
 
