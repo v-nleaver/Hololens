@@ -40,6 +40,10 @@ Note:  the current release version is the April 2024 Update, Build 1272.
 | 19041                  | [Windows Holographic, version 20H2](hololens-release-notes-2004.md#windows-holographic-version-20h2) <br> [Windows Holographic, version 2004](hololens-release-notes-2004.md#windows-holographic-version-2004) | Nov 2020 <br> May 2020    | 19041.1128 <br> 19041.1103  |
 | 18362                  | [Windows Holographic, version 1903](hololens-release-notes-1903.md#windows-holographic-version-1903---november-2019-update)   | Nov 2019     | 18362.1039   |
 
+#### UK PSTI Conformity 
+
+For purposes of conformance with the UK Product Security and Telecommunications Infrastructure (PSTI) Act, the minimum security update period for HoloLens 2 is December 31, 2027 (for units purchased until December 2024). For units purchased after December 2024, the support period will be 3 years from date of purchase.
+
 ### How to find out which operating system version is on HoloLens?
 
 To check what version your HoloLens is on, open the Settings app and select **System** -> **About** (depending on how significant your window is you may need to scroll down to the bottom to see the About page.)
@@ -55,7 +59,7 @@ To explicitly check for updates, launch the Settings app and select **Update & S
 <img src="images/check-for-updates.png" width="500px" alt="Screenshot of how to check for updates in the Settings app.">
 
 > [!TIP]
-> Searching for a feature but didn't find it on this page? Try checking out of the previous feature release pages. You can navigate there using the links above, or the table of contents.
+> Searching for a feature but didn't find it on this page? Try checking out of the previous feature release pages. You can navigate there using the links provided, or the table of contents.
 
 ## Windows Holographic, version 23H2 - April 2024 Update
 
@@ -183,7 +187,7 @@ This policy controls if the Start menu can be opened by tapping the start icon o
 
 #### RequireStartIconVisible
 
-This policy controls whether it is required that the user looks at the Start icon when it is tapped in order to open the Start menu.  It is managed via [custom OMA-URI](/mem/intune/configuration/custom-settings-windows-10) policy:
+This policy controls if users are required to look at the Start icon when it is tapped in order to open the Start menu.  It is managed via [custom OMA-URI](/mem/intune/configuration/custom-settings-windows-10) policy:
 
 - URI value: ./Vendor/MSFT/Policy/Config/MixedReality/RequireStartIconVisible
 
@@ -239,7 +243,7 @@ Refer to [DeviceInstall_Removable_Deny](/windows/client-management/mdm/policy-cs
 
 #### EnableInstallationPolicyLayering
 
-This policy changes the evaluation order in which Allow and Prevent policy settings are applied when more than one install policy setting is applicable for a given device. Enable this policy setting to ensure that devices listed in the AllowInstallationOfMatchingDeviceIDs policy are allowed to install even if the DeviceInstall_Removable_Deny policy is enabled. It is managed via [custom OMA-URI](/mem/intune/configuration/custom-settings-windows-10) policy: 
+This policy changes the evaluation order in which Allow and Prevent policy settings are applied when more than one install policy setting is applicable for a given device. Enable this policy setting if you want to ensure that devices listed in the AllowInstallationOfMatchingDeviceIDs policy are allowed to install, even if the DeviceInstall_Removable_Deny policy is enabled. It is managed via [custom OMA-URI](/mem/intune/configuration/custom-settings-windows-10) policy: 
 
 - URI value: ./Device/Vendor/MSFT/Policy/Config/DeviceInstallation/EnableInstallationPolicyLayering
 
@@ -282,7 +286,7 @@ To support users requiring Iris and/or PIN as alternative sign-in options to FID
 
 ### Signin app default screen policy 
 
-In environments where devices are shared between multiple people and not everyone is enrolled in Iris sign-in, it may be preferable to always show the Other User screen so a user picking up the device can quickly start the sign-in process. For example, in an environment where everyone uses their FIDO2 security keys to sign in, it would be preferable to start on the Other User screen instead of having to find the correct user first.
+There are some environments where devices are shared between multiple people and not everyone is enrolled in Iris sign-in.  In these scenarios, it may be preferable to always show the Other User screen so a user picking up the device can quickly start the sign-in process. For example, in an environment where everyone uses their FIDO2 security keys to sign in, it would be preferable to start on the Other User screen instead of having to find the correct user first.
 
 To help with this scenario, we added a new MDM policy: PreferLogonAsOtherUser. When this policy is enabled, the HoloLens Sign-in app shows the Other User screen by default when the app starts. 
 
@@ -306,7 +310,7 @@ The next Insider Preview flight for HoloLens includes the ability for users to t
 
 #### USB NFC reader support
 
-USB-CCID (Chip Card Interface Device) compatible NFC FIDO2 readers with USB base class ‘0B’ and subclass ‘00’ are supported. Refer to [Microsoft Class Drivers for USB CCID Smart Cards](/previous-versions/windows/hardware/design/dn653571(v=vs.85)) for details on Microsoft class driver for USB CCID devices.  To determine if your NFC reader is compatible with HoloLens, you may either refer to the documentation provided by the reader's manufacturer, or use the Device Manager on your PC, as follows:
+USB-CCID (Chip Card Interface Device) compatible NFC FIDO2 readers with USB base class ‘0B’ and subclass ‘00’ are supported. Refer to [Microsoft Class Drivers for USB CCID Smart Cards](/previous-versions/windows/hardware/design/dn653571(v=vs.85)) for details on Microsoft class driver for USB CCID devices.  There are two ways to determine if your NFC reader is compatible with HoloLens. You may refer to the documentation provided by the reader's manufacturer. Or, you may use the Device Manager on your PC, as follows:
 
 1.	Plug in the USB NFC reader to a Windows PC.
 2.	In Device Manager, locate the reader device and right click on it and select Properties.
@@ -498,7 +502,7 @@ We changed one of our OOBE screens before the device calibrates to show informat
 
 ### Remove users on a device
 
-Organizations with scaled deployments of HoloLens 2 devices might encounter the 64-user limit per device that prevents adding users. To address this situation, we added controls that delete the least recent users from the device at controlled intervals, which is a feature that is also available on the Desktop version of Windows. Deleting users in a controlled way is useful for other reasons, too. Removing the inactive accounts speeds up the sign-in process and improves privacy and security by reducing retention of unused data. We use three criteria to determine when to remove user accounts on the device:
+Organizations with scaled deployments of HoloLens 2 devices might encounter the 64-user limit per device that prevents adding users. To address this situation, we added controls that delete the least recent users from the device at controlled intervals.  This feature is also available on the Desktop version of Windows. Deleting users in a controlled way is useful for other reasons, too. Removing the inactive accounts speeds up the sign-in process and improves privacy and security by reducing retention of unused data. We use three criteria to determine when to remove user accounts on the device:
 
 - When a user is inactive on the device for a specific number of days, configurable via **ProfileInactivityThreshold.**
 - When the device reaches a storage threshold, configurable via **StorageCapacityStartDeletion** and **StorageCapacityStopDeletion**.
@@ -662,9 +666,9 @@ Find this information later at [Policy CSP - MixedReality](/windows/client-manag
 - [Storage/AllowStorageSenseTemporaryFilesCleanup](/windows/client-management/mdm/policy-csp-storage#storage-allowstoragesensetemporaryfilescleanup)
   - When Storage Sense runs, it can delete the user’s temporary files that aren't in use.
 - [Storage/ConfigStorageSenseCloudContentDehydrationThreshold](/windows/client-management/mdm/policy-csp-storage#storage-configstoragesensecloudcontentdehydrationthreshold)
-  - When Storage Sense runs, it can dehydrate cloud-backed content that hasn’t been opened in a specific number of days. If you enable this policy setting, you must provide the minimum number of days a cloud-backed file can remain unopened before Storage Sense dehydrates it. Supported values are: 0–365.
+  - When Storage Sense runs, it can dehydrate cloud-backed content that are not opened in a specific number of days. If you enable this policy setting, you must provide the minimum number of days a cloud-backed file can remain unopened before Storage Sense dehydrates it. Supported values are: 0–365.
 - [Storage/ConfigStorageSenseDownloadsCleanupThreshold](/windows/client-management/mdm/policy-csp-storage#storage-configstoragesensedownloadscleanupthreshold)
-  - When Storage Sense runs, it can delete files in the user’s Downloads folder if they haven’t been opened for more than a specific number of days. If you enable this policy setting, you must provide the minimum number of days a file can remain unopened before Storage Sense deletes it from the Downloads folder. Supported values are: 0-365.
+  - When Storage Sense runs, it can delete files in the user’s Downloads folder if they are not opened for more than a specific number of days. If you enable this policy setting, you must provide the minimum number of days a file can remain unopened before Storage Sense deletes it from the Downloads folder. Supported values are: 0-365.
 - [Storage/ConfigStorageSenseGlobalCadence](/windows/client-management/mdm/policy-csp-storage#storage-configstoragesenseglobalcadence)
   - Storage Sense can automatically clean some of the user’s files to free up disk space. The following are supported options:
     - 1 – Daily
@@ -773,7 +777,7 @@ There is a new version of the Microsoft Store app for the HoloLens 2. This app u
 
 ![Image of new store app that became availble in May 2022](images/store-app-hololens2-censored.jpg)
 
-With the new store, you see apps that are available for HoloLens 2, and you are able to scroll through different various industries and solutions to view apps that may be useful to you. You are able to access any company apps by selecting the Work icon, which looks like a briefcase in the top left. (The company name and user are censored in this screenshot).
+With the new store, you see apps that are available for HoloLens 2.  You are able to scroll through different various industries and solutions to view apps that may be useful to you. You are able to access any company apps by selecting the Work icon, which looks like a briefcase in the top left. (The company name and user are censored in this screenshot).
 
 Want to check your apps, or app versions? You can select the **Library** icon and **Get updates**. Want to know what version an app is on? From the **Library** screen, select an app installed on your device to go to that apps page, and scroll to the bottom and look for **>_ Installed version**.
 
@@ -826,7 +830,7 @@ Color-blind mode is a feature to help make HoloLens more accessible. The new col
 
 ### Single app kiosk policy for launching other apps
 
-Introduced a new MDM policy MixedReality\AllowLaunchUriInSingleAppKiosk. This policy can be enabled to allow for other apps to be launched with in a single app Kiosk, which may be useful, for example,  if you want to launch the Settings app to calibrate your device or change your Wi-Fi.
+Introduced a new MDM policy MixedReality\AllowLaunchUriInSingleAppKiosk. This policy can be enabled to allow for other apps to be launched with in a single app Kiosk. This can be useful if you want to launch the Settings app to calibrate your device or change your Wi-Fi.
 
 By default, launching applications via [Launcher API (Launcher Class (Windows.System) - Windows UWP applications)](/uwp/api/Windows.System.Launcher?view=winrt-22000&preserve-view=true) is disabled in single app kiosk mode. To enable applications to launch in single app kiosk mode on HoloLens devices, set the policy value to true.
 
@@ -838,7 +842,7 @@ The OMA-URI of new policy: `./Device/Vendor/MSFT/Policy/Config/MixedReality/Allo
 
 When the HoloLens 2 is running in warm environments or with heavy performance requirements (CPU/GPU usage, peripheral usage, etc.), it might get hot enough that it takes actions automatically to keep itself from overheating. If your app demands high peripheral performance, consider using the [PowerThermalNotification Software Development Kit (SDK)](/windows/mixed-reality/develop/unity/managing-power-and-thermals) to subscribe to notification events and implement your own custom actions.
 
-Using this new SDK can allow the device to operate longer in situations where the app is closed by the system.
+Using this new SDK can allow the device to operate longer in situations where the system closes the app.
 
 ### Fixes and improvements in Windows Holographic, version 22H1
 
@@ -876,7 +880,7 @@ Improvements and fixes in the update:
 
 ### Moving Platform Mode Settings
 
-We've added new a new page to the Settings app to configure and control [Moving Platform Mode](hololens2-moving-platform.md). Being able to turn on Moving Platform Mode no longer requires needing to use device portal, which increases usability and security. User can reach the new page by opening the **Settings** app and selecting -> **System** -> **Holograms** and scroll down to see the Moving Platform Mode section and select **Setup Moving Platform Mode**.
+We've added a new page to the Settings app to configure and control [Moving Platform Mode](hololens2-moving-platform.md). Being able to turn on Moving Platform Mode no longer requires needing to use device portal, which increases usability and security. User can reach the new page by opening the **Settings** app and selecting -> **System** -> **Holograms** and scroll down to see the Moving Platform Mode section and select **Setup Moving Platform Mode**.
 
 ![How to reach the Moving Platform Mode page](images/mpm-from-holograms-settings.jpg)
 
@@ -890,15 +894,15 @@ Users can also manually set the down direction, if, for instance,  you’re usin
 
 #### MixedReality/ConfigureMovingPlatform
 
-This policy controls the behavior of moving platform feature on HoloLens 2, that is, whether it’s turned off / on.  It can be toggled by a user. It should only be used by customers who intend to use HoloLens 2 in moving environments with low dynamic motion. Refer to [HoloLens 2 Moving Platform Mode](hololens2-moving-platform.md) for background information.
+This policy controls the behavior of moving platform feature on HoloLens 2, that is, whether it’s turned off / on.  A user can toggle this capability. Only customers who intend to use HoloLens 2 in moving environments with low dynamic motion should use this policy. Refer to [HoloLens 2 Moving Platform Mode](hololens2-moving-platform.md) for background information.
 
 The OMA-URI of new policy: `./Device/Vendor/MSFT/Policy/Config/MixedReality/ConfigureMovingPlatform`
 
 Supported values:
 
 - 0 (Default) - Last set user's preference. Initial state is OFF and after that user's preference is persisted across reboots and is used to initialize the system.
-- 1 Force off - Moving platform is disabled and cannot be changed by a user.
-- 2 Force on - Moving platform is enabled and cannot be changed by a user.
+- 1 Force off - Moving platform is disabled and users cannot change it.
+- 2 Force on - Moving platform is enabled and users cannot change it.
 
 #### MixedReality/ManualDownDirectionDisabled
 
