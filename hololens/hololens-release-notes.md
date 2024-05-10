@@ -77,7 +77,7 @@ Windows Holographic, version 24H1 is now available and brings a great set of new
 |[Improve Intune app update experience](#improve-intune-app-update-experience)|The Intune LOB App update waits for App exit instead of forcing App shutdown. | All |
 |[Update to eye tracking calibration](#update-to-eye-tracking-calibration)|The option to perform eye tracking calibration is shown on the device even if it has been deployed via Autopilot. | All |
 |[Policies to set device standby action](#policies-to-set-device-standby-action)|Policies allow the admin to execute supported actions in modern standby. | IT Admin |
-|[Fixes and improvements](#fixes-and-improvements)  | Additional fixes and improvements for HoloLens. | All  |
+|[Fixes and improvements](#fixes-and-improvements)  | More fixes and improvements for HoloLens. | All  |
 
 ### OpenXR Code Update
 
@@ -89,13 +89,13 @@ Using a shared Microsoft Entra account on your HoloLens results in the quickest 
 
 - Multiple people share the same set of HoloLens devices.
 - Access to Microsoft Entra resources, such as Dynamics 365 Guides content, is required.
-- Tracking who has used the device isn't required.
+- Tracking who used the device isn't required.
 
 More details, including specific steps on how to configure these accounts, can be found in the [Shared Microsoft Entra accounts in HoloLens](shared-aad-accounts.md) article.
 
 ### Improve Intune app update experience
 
-The Intune LOB App update does not enforce App shutdown if the App is still running on the device. Instead, the new version of the LOB App is installed and replaces the old App, once the old App is fully exited via user action, sign out or device reboot. 
+The Intune LOB App update does not enforce App shutdown if the App is still running on the device. Instead, the new version of the LOB App is installed and replaces the old App only after the old App is fully exited via user action, sign out or device reboot. 
 
 Refer to [Consistent LOB App deployment and update](/hololens/hololens-best-practices-experiences#consistent-lob-app-deployment-and-update) for best practices on getting a consistent LOB App update experience for HoloLens devices.
 
@@ -107,15 +107,15 @@ New policy to enable auto unlock [MixedReality/AutoUnlock](/windows/client-manag
 
 Network connectivity report is added to Offline Diagnostics to help users investigate network connectivity issues on HoloLens 2 devices. After user triggers Offline Diagnostics, device IP addresses, Wi-Fi information, proxy settings and device’s connectivity to known cloud service endpoints are collected.
 
-The report file NetworkConnectivityReport.txt will be included in the diagnostics ZIP file under Documents folder. Users can also view the report on device through Settings > Update & Security > Troubleshoot > View network connectivity report.
+The report file NetworkConnectivityReport.txt is included in the diagnostics ZIP file under Documents folder. Users can also view the report on device through Settings > Update & Security > Troubleshoot > View network connectivity report.
 
 ### Enforce time sync during OOBE
 
-During OOBE, the HoloLens device attempts to sync the device time with the time server after the device has connected to Wi-Fi.
+During OOBE, the HoloLens device attempts to sync the device time with the time server after the device connects to Wi-Fi.
 
 ### Update to eye tracking calibration
 
-The option to perform eye tracking calibration is now shown on the device even if it has been deployed via Autopilot. Customers still have the option to disable this behavior via the existing [MixedReality/SkipCalibrationDuringSetup](/windows/client-management/mdm/policy-csp-mixedreality#skipcalibrationduringsetup) policy.
+The option to perform eye tracking calibration is now shown on the device even if it is deployed via Autopilot. Customers can still opt to disable this behavior via the existing [MixedReality/SkipCalibrationDuringSetup](/windows/client-management/mdm/policy-csp-mixedreality#skipcalibrationduringsetup) policy.
 
 Any user on the device can still choose to run eye calibration at any time to improve their experience.
 
@@ -129,13 +129,13 @@ Any user on the device can still choose to run eye calibration at any time to im
 
 - Fixed an issue where the user list cannot be dismissed by clicking on the "Add User" or the "Other User" buttons on the sign in screen if [MixedReality/PreferLogonAsOtherUser](/windows/client-management/mdm/policy-csp-mixedreality?branch=main#preferlogonasotheruser) policy is enabled.
 
-- Improved error handling when the device has reached the max number of supported users on device. See [Remove users on a device](https://aka.ms/hlmaxusers) for recommendations if your device is used by more than 63 Microsoft Entra accounts.
+- Improved error handling when the device reaches the max number of supported users on device. See [Remove users on a device](https://aka.ms/hlmaxusers) for recommendations if your device is used by more than 63 Microsoft Entra accounts.
 
 - Improved error handling when the wrong user credentials are supplied when using web sign in.
 
 - Fixed an issue in Device Portal that would sometimes prevent the export of the spatial mapping database.
 
-- Modified the timing of when LOB App updates occur.  In the past, LOB App updates forced applications to shut down to complete an update.  Now, if an application is actively being used, the LOB App update will wait to perform the update until the application is not in use.
+- Modified the timing of when LOB App updates occur.  In the past, LOB App updates forced applications to shut down to complete an update.  Now, if an application is actively being used, the LOB App update waits to perform the update until the application is not in use.
 
 ## Windows Holographic, version 23H2 - April 2024 Update
 
