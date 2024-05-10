@@ -914,7 +914,7 @@ Color-blind mode is a feature to help make HoloLens more accessible. The new col
 
 ### Single app kiosk policy for launching other apps
 
-Introduced a new MDM policy MixedReality\AllowLaunchUriInSingleAppKiosk. This policy can be enabled to allow for other apps to be launched with in a single app Kiosk. This can be useful if you want to launch the Settings app to calibrate your device or change your Wi-Fi.
+Introduced a new MDM policy MixedReality\AllowLaunchUriInSingleAppKiosk. This policy can be enabled to allow for other apps to be launched with in a single app Kiosk. It can be useful if you want to launch the Settings app to calibrate your device or change your Wi-Fi.
 
 By default, launching applications via [Launcher API (Launcher Class (Windows.System) - Windows UWP applications)](/uwp/api/Windows.System.Launcher?view=winrt-22000&preserve-view=true) is disabled in single app kiosk mode. To enable applications to launch in single app kiosk mode on HoloLens devices, set the policy value to true.
 
@@ -964,7 +964,7 @@ Improvements and fixes in the update:
 
 ### Moving Platform Mode Settings
 
-We've added a new page to the Settings app to configure and control [Moving Platform Mode](hololens2-moving-platform.md). Being able to turn on Moving Platform Mode no longer requires needing to use device portal, which increases usability and security. User can reach the new page by opening the **Settings** app and selecting -> **System** -> **Holograms** and scroll down to see the Moving Platform Mode section and select **Setup Moving Platform Mode**.
+We added a new page to the Settings app to configure and control [Moving Platform Mode](hololens2-moving-platform.md). Being able to turn on Moving Platform Mode no longer requires needing to use device portal, which increases usability and security. User can reach the new page by opening the **Settings** app and selecting -> **System** -> **Holograms** and scroll down to see the Moving Platform Mode section and select **Setup Moving Platform Mode**.
 
 ![How to reach the Moving Platform Mode page](images/mpm-from-holograms-settings.jpg)
 
@@ -978,7 +978,7 @@ Users can also manually set the down direction, if, for instance,  you’re usin
 
 #### MixedReality/ConfigureMovingPlatform
 
-This policy controls the behavior of moving platform feature on HoloLens 2, that is, whether it’s turned off / on.  A user can toggle this capability. Only customers who intend to use HoloLens 2 in moving environments with low dynamic motion should use this policy. Refer to [HoloLens 2 Moving Platform Mode](hololens2-moving-platform.md) for background information.
+This policy controls the behavior of moving platform feature on HoloLens 2, that is, whether it’s off / on.  A user can toggle this capability. Only customers who intend to use HoloLens 2 in moving environments with low dynamic motion should use this policy. Refer to [HoloLens 2 Moving Platform Mode](hololens2-moving-platform.md) for background information.
 
 The OMA-URI of new policy: `./Device/Vendor/MSFT/Policy/Config/MixedReality/ConfigureMovingPlatform`
 
@@ -990,7 +990,7 @@ Supported values:
 
 #### MixedReality/ManualDownDirectionDisabled
 
-This policy controls whether the user can change down direction manually or not. If no down direction is set by the user, then an automatically calculated down direction is used by the system. This policy has no dependency on ConfigureMovingPlatform policy and they can be set independently.
+This policy controls whether the user can change down direction manually or not. If the user does not set the down direction, then an automatically calculated down direction is used by the system. This policy has no dependency on ConfigureMovingPlatform policy and they can be set independently.
 
 The OMA-URI of new policy: `./Device/Vendor/MSFT/Policy/Config/MixedReality/ManualDownDirectionDisabled`
 
@@ -1001,7 +1001,7 @@ Supported values:
 
 ### Moving Platform Mode SDK
 
-Sometimes you may want the decision on if to use Moving Platform Mode to be dependent on your situation, you may only need it enabled when using your app, or only a specific app. In these cases, you may wish to [enable Moving Platform Mode from your app using the SDK](/windows/mixed-reality/develop/unity/moving-platform-unity).
+There are cases where you want the availability of Moving Platform Mode to be dependent on your situation, enabled for your app or enabled for a specific app. In these cases, you may wish to [enable Moving Platform Mode from your app using the SDK](/windows/mixed-reality/develop/unity/moving-platform-unity).
 
 #### Improvements and fixes in the February 2022 update
 
@@ -1019,7 +1019,7 @@ Sometimes you may want the decision on if to use Moving Platform Mode to be depe
 
 ### Start gestures settings
 
-The team has implemented a solution for users who don't want the start menu popping up while doing tasks while looking at their hands, such as surgery and using apps like Remote Assist. This can also help in other scenarios.
+There may be situations where a user many not want the start menu to pop up while doing certain tasks while they look at their hands, such as surgery and using apps like Remote Assist. This solution can also help in other scenarios.
 
 Open the **Start menu** and select the **Settings** app -> **System** -> **Start gestures**.
 
@@ -1065,9 +1065,9 @@ Improvements and fixes in the update:
 
 - Build 20348.1432
 
-Windows Holographic, version 21H2 is now available and brings a great set of new features to HoloLens 2 users and IT professionals. This one’s about the improved troubleshooting and device reports, some fixed bugs in kiosk mode and the certificate viewer, the expanded manageability surface and the increased update reliability. A new flagship feature of this feature update coming to HoloLens is our Moving Platform Mode. Check out all the new great features for HoloLens 2!
+Windows Holographic, version 21H2 is now available and brings a great set of new features to HoloLens 2 users and IT professionals. This release includes improved troubleshooting and device reports, some fixed bugs in kiosk mode and the certificate viewer, the expanded manageability surface and the increased update reliability. A new flagship feature of this feature update coming to HoloLens is our Moving Platform Mode. Check out all the new great features for HoloLens 2!
 
-This latest release is a monthly update to version 21H1, but this time we're including new features, because of this the major build number remains the same and Windows Update indicates a monthly release to version 21H1 (build 20348). To ensure you've received 21H2, verify the version number is 20348.1432 or higher. You can look at your Build Number in your **Settings** -> **System** -> **About** screen to confirm you are on the latest available build 20348.1432+.
+This latest release is a monthly update to version 21H1, but this time we're including new features, because of this the major build number remains the same and Windows Update indicates a monthly release to version 21H1 (build 20348). To check if you have 21H2, verify the version number is 20348.1432 or higher. You can look at your Build Number in your **Settings** -> **System** -> **About** screen to confirm you are on the latest available build 20348.1432+.
 
 To update to the latest release, open the Settings app, go to Update & Security, and tap Check for Updates. For more information on how to manage HoloLens updates, visit [Manage HoloLens updates.](hololens-updates.md)
 
@@ -1093,11 +1093,11 @@ To update to the latest release, open the Settings app, go to Update & Securit
 ✔️ If you'd like to have more control over OS updates, check out these [newly enabled Update policies.](#improved-update-restart-detection-and-notifications) <br>
 ✔️ If you need to make your organization's apps available on the company store via the Microsoft Store, but want to only allow access to your organization's apps and not the full store, [set this policy.](#use-only-private-store-apps-for-microsoft-store) <br>
 ✔️ If you'd like to know the free storage space, SSID, or BSSID of your HoloLens devices, then check out these [reporting CSPs.](#csp-changes-for-reporting-hololens-details) <br>
-✔️ If you'd like to use WDAC to block apps or processes from launching, but also need to use your own line of bushiness apps, you can now [allow LOB in your WDAC policy](#use-wdac-and-lob-apps).
+✔️ If you'd like to use WDAC to block apps or processes from launching while also using your own line of bushiness apps, you can now [allow LOB in your WDAC policy](#use-wdac-and-lob-apps).
 
 ### Moving Platform Mode
 
-As of [Windows Holographic, version 21H2](hololens-release-notes.md#windows-holographic-version-21h2) we have added beta support for tracking on low-dynamic motion moving platforms on HoloLens 2. After installing the build and enabling Moving Platform Mode, you’ll be able to use your HoloLens 2 in previously inaccessible environments, like large ships and large marine vessels. Currently, the feature is targeted at enabling these specific moving platforms only. While nothing prevents you from attempting to use the feature in other environments, the feature is focused on adding support for these environments first.
+As of [Windows Holographic, version 21H2](hololens-release-notes.md#windows-holographic-version-21h2) we added beta support for tracking on low-dynamic motion moving platforms on HoloLens 2. After installing the build and enabling Moving Platform Mode, you’ll be able to use your HoloLens 2 in previously inaccessible environments, like large ships and large marine vessels. Currently, the feature is targeted at enabling these specific moving platforms only. While nothing prevents you from attempting to use the feature in other environments, the feature is focused on adding support for these environments first.
 
 To learn more about what is supported and how to enable this new feature, [visit the moving platform page](hololens2-moving-platform.md).
 
@@ -1109,7 +1109,7 @@ To learn more about what is supported and how to enable this new feature, [visit
 
 ### PFX file support for Certificate Manager
 
-Introduced in Windows Insider build 20348.1405. We’ve added support to the [Certificate Manager](certificate-manager.md) to now use .pfx certificates. When users navigate to **Settings** > **Update & Security** > **Certificates**, and select **Install a certificate** the UI now supports .pfx certificate file.
+Introduced in Windows Insider build 20348.1405. We added support to the [Certificate Manager](certificate-manager.md) to now use .pfx certificates. When users navigate to **Settings** > **Update & Security** > **Certificates**, and select **Install a certificate** the UI now supports .pfx certificate file.
 Users can import .pfx certificate, with private key, to user store or machine store.
 
 #### Overview to try out PFX files in Certificate Manager
@@ -1120,7 +1120,7 @@ Users can import .pfx certificate, with private key, to user store or machine st
 
 ### View advanced diagnostic report in Settings on HoloLens
 
-For managed devices when troubleshooting behavior, confirming that an expected policy configuration was applied is an important step. Previously to this new feature, this had to be done off device via MDM or near the device after exporting MDM diagnostic logs gathered via **Settings** -> **Accounts** > **Access work or school**, and select **Export your management logs** and viewed on a nearby PC.
+For managed devices when troubleshooting behavior, confirming that an expected policy configuration was applied is an important step. Prior to this new feature, the method to verify a policy was performed off device via MDM or near the device after exporting MDM diagnostic logs gathered via **Settings** -> **Accounts** > **Access work or school**, and select **Export your management logs** and viewed on a nearby PC.
 
 Now the MDM Diagnostics can be viewed on device using the Edge browser. To more easily view the MDM Diagnostic report navigate to the Access work or school page, and select **View advanced diagnostic report**. This generates and opens the report in a new Edge window.
 
