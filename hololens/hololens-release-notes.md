@@ -31,11 +31,11 @@ In between our feature updates, we also release fixes and improvements and secur
 
 To help provide clarity, this release notes page provides information for every major and minor update. The most current release is listed first, and previous releases follow in chronological order. If you’d like to learn about updates to down level versions (or view previous major feature releases), refer to the table that follows.
 
-Note:  the current release version is the April 2024 Update, Build 1272.
+Note:  the current release version is the May 2024 Update, Build 1376.
 
 | Major release   number | Feature release name                  | Date         | Build number |
 |------------------------|-------------------------------------|--------------|--------------|
-| 22621| [Windows Holographic, version 23H2](#windows-holographic-version-23h2---october-2023-update) <br> [Windows Holographic, version 23H1](#windows-holographic-version-23h1---june-2023-update)  | October 2023  <br> June 2023   | 22621.1244  <br> 22621.1113 |
+| 22621| [Windows Holographic, version 24H1](#windows-holographic-version-24h1---may-2024-update) <br> [Windows Holographic, version 23H2](#windows-holographic-version-23h2---october-2023-update) <br> [Windows Holographic, version 23H1](#windows-holographic-version-23h1---june-2023-update)  | May 2024  <br> October 2023  <br> June 2023   | 22621.1376  <br> 22621.1244  <br> 22621.1113 |
 | 20348| [Windows Holographic, version 22H2](#windows-holographic-version-22h2) <br> [Windows Holographic, version 22H1](#windows-holographic-version-22h1) <br> [Windows Holographic, version 21H2](#windows-holographic-version-21h2) <br> [Windows Holographic, version 21H1](#windows-holographic-version-21h1)  | November 2022 <br> April 2022 <br> October 2021 <br> May 2021   | 20348.1528 <br> 20348.1501 <br> 20348.1432 <br> 20346.1002   |
 | 19041                  | [Windows Holographic, version 20H2](hololens-release-notes-2004.md#windows-holographic-version-20h2) <br> [Windows Holographic, version 2004](hololens-release-notes-2004.md#windows-holographic-version-2004) | Nov 2020 <br> May 2020    | 19041.1128 <br> 19041.1103  |
 | 18362                  | [Windows Holographic, version 1903](hololens-release-notes-1903.md#windows-holographic-version-1903---november-2019-update)   | Nov 2019     | 18362.1039   |
@@ -60,6 +60,82 @@ To explicitly check for updates, launch the Settings app and select **Update & S
 
 > [!TIP]
 > Searching for a feature but didn't find it on this page? Try checking out of the previous feature release pages. You can navigate there using the links provided, or the table of contents.
+
+## Windows Holographic, version 24H1 - May 2024 Update
+
+- Build 22621.1376
+
+Windows Holographic, version 24H1 is now available and brings a great set of new features to HoloLens 2 users, IT professionals and developers. Check out all the new great features for HoloLens 2!
+
+| Feature   | Description  | User or scenario |
+|-----------|--------------|---|
+|[OpenXR code update](#openxr-code-update)|In-box OpenXR code updated to version 113.2403.5001. | Developer |
+|[Shared Microsoft Entra accounts](#shared-microsoft-entra-accounts)|Shared Microsoft Entra (formerly Azure Active Directory) accounts on HoloLens are regular Microsoft Entra user accounts that can sign-in to the HoloLens without requiring any credentials. | IT Admin |
+|[Policy to enable auto unlock](#policy-to-enable-auto-unlock)|Policy to control whether a user is prompted for credentials when returning to the device in suspended state. | IT Admin |
+|[Collect and view network connectivity report](#collect-and-view-network-connectivity-report)|Network connectivity report is added to Offline Diagnostics to help users investigate network connectivity issues on HoloLens 2 devices. | All |
+|[Enforce time sync during OOBE](#enforce-time-sync-during-oobe)| When the HoloLens connects to Wi-Fi, the device attempts to sync with the time server. | All |
+|[Improve Intune app update experience](#improve-intune-app-update-experience)|The Intune LOB App update waits for App exit instead of forcing App shutdown. | All |
+|[Update to eye tracking calibration](#update-to-eye-tracking-calibration)|The option to perform eye tracking calibration is shown on the device even if it has been deployed via Autopilot. | All |
+|[Policies to set device standby action](#policies-to-set-device-standby-action)|Policies allow the admin to execute supported actions in modern standby. | IT Admin |
+|[Fixes and improvements](#fixes-and-improvements)  | Additional fixes and improvements for HoloLens. | All  |
+
+### OpenXR Code Update
+
+The latest release of OpenXR provides the best out-of-box experience for customers without Microsoft store access.  See [OpenXR Tools for Windows Mixed Reality - 113.2403.5001](https://github.com/microsoft/OpenXR-MixedReality/releases/tag/113.2403.5001) for more details on the release.
+
+### Shared Microsoft Entra accounts
+
+Using a shared Microsoft Entra account on your HoloLens results in the quickest login experience, since it does not require any credentials. This setup is ideal for scenarios where the following conditions are true:
+
+- Multiple people share the same set of HoloLens devices.
+- Access to Microsoft Entra resources, such as Dynamics 365 Guides content, is required.
+- Tracking who has used the device isn't required.
+
+More details, including specific steps on how to configure these accounts, can be found in the [Shared Microsoft Entra accounts in HoloLens](shared-aad-accounts.md) article.
+
+### Improve Intune app update experience
+
+The Intune LOB App update does not enforce App shutdown if the App is still running on the device. Instead, the new version of the LOB App is installed and replaces the old App, once the old App is fully exited via user action, sign out or device reboot. 
+
+Refer to [Consistent LOB App deployment and update](/hololens/hololens-best-practices-experiences#consistent-lob-app-deployment-and-update) for best practices on getting a consistent LOB App update experience for HoloLens devices.
+
+### Policy to enable auto-unlock
+
+New policy to enable auto unlock [MixedReality/AutoUnlock](/windows/client-management/mdm/policy-csp-mixedreality#autounlock). When enabled, this policy allows a signed-in user to resume using the device without having to enter credentials. 
+
+### Collect and view network connectivity report
+
+Network connectivity report is added to Offline Diagnostics to help users investigate network connectivity issues on HoloLens 2 devices. After user triggers Offline Diagnostics, device IP addresses, Wi-Fi information, proxy settings and device’s connectivity to known cloud service endpoints are collected.
+
+The report file NetworkConnectivityReport.txt will be included in the diagnostics ZIP file under Documents folder. Users can also view the report on device through Settings > Update & Security > Troubleshoot > View network connectivity report.
+
+### Enforce time sync during OOBE
+
+During OOBE, the HoloLens device attempts to sync the device time with the time server after the device has connected to Wi-Fi.
+
+### Update to eye tracking calibration
+
+The option to perform eye tracking calibration is now shown on the device even if it has been deployed via Autopilot. Customers still have the option to disable this behavior via the existing [MixedReality/SkipCalibrationDuringSetup](/windows/client-management/mdm/policy-csp-mixedreality#skipcalibrationduringsetup) policy.
+
+Any user on the device can still choose to run eye calibration at any time to improve their experience.
+
+### Policies to set device standby action
+
+[MixedReality/ConfigureDeviceStandbyAction](/windows/client-management/mdm/policy-csp-mixedreality#configuredevicestandbyaction) and [MixedReality/ConfigureDeviceStandbyActionTimeout](/windows/client-management/mdm/policy-csp-mixedreality#configuredevicestandbyactiontimeout) policies enable configuring HoloLens 2 to execute certain action, when device is in modern standby after certain period of time. See policy documentation for supported actions.
+
+### Fixes and improvements
+
+- Fixed an issue where the user picture displayed does not match the selected user on the sign in screen if [MixedReality/PreferLogonAsOtherUser](/windows/client-management/mdm/policy-csp-mixedreality?branch=main#preferlogonasotheruser) policy is enabled.
+
+- Fixed an issue where the user list cannot be dismissed by clicking on the "Add User" or the "Other User" buttons on the sign in screen if [MixedReality/PreferLogonAsOtherUser](/windows/client-management/mdm/policy-csp-mixedreality?branch=main#preferlogonasotheruser) policy is enabled.
+
+- Improved error handling when the device has reached the max number of supported users on device. See [Remove users on a device](https://aka.ms/hlmaxusers) for recommendations if your device is used by more than 63 Microsoft Entra accounts.
+
+- Improved error handling when the wrong user credentials are supplied when using web sign in.
+
+- Fixed an issue in Device Portal that would sometimes prevent the export of the spatial mapping database.
+
+- Modified the timing of when LOB App updates occur.  In the past, LOB App updates forced applications to shut down to complete an update.  Now, if an application is actively being used, the LOB App update will wait to perform the update until the application is not in use.
 
 ## Windows Holographic, version 23H2 - April 2024 Update
 
@@ -1414,7 +1490,7 @@ There are a couple methods available for installing Microsoft Edge Insider chann
 
 **Direct install on device (currently only available to unmanaged devices)**
 
-  1. On your HoloLens 2, visit the [Edge Insider download page](https://www.microsoftedgeinsider.com/download).
+1. On your HoloLens 2, visit the [Edge Insider download page](https://www.microsoftedgeinsider.com/download).
   1. Select the **Download for HoloLens 2** button for the Edge Insider channel you wish to install.
   1. Launch the downloaded .msix file from the Edge download queue or from your device's "Downloads" folder (using File Explorer).
   1. [App installer](app-deploy-app-installer.md) launches.
@@ -1423,7 +1499,7 @@ There are a couple methods available for installing Microsoft Edge Insider chann
 
 **Install via PC with Windows Device Portal (requires [developer mode](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) to be enabled on HoloLens 2)**
 
-  1. On your PC, visit the [Edge Insider download page](https://www.microsoftedgeinsider.com/download).
+1. On your PC, visit the [Edge Insider download page](https://www.microsoftedgeinsider.com/download).
   1. Select the **drop-down arrow button** next to the "Download for Windows 10" button for the Edge Insider channel you wish to install.
   1. Select **HoloLens 2** in the drop-down menu.
   1. Save the .msix file to the "Downloads" folder of your PC (or another folder you can easily find).
@@ -1464,7 +1540,7 @@ The 360 Viewer extension is built on WebXR and automatically installs alongside 
 1. Select the **Enter VR** button on the website. The location and visual representation of this button may vary per website, but it may look similar to:
 
     ![Enter VR button example.](images/75px-enter-vr.png)
-
+   
 1. The first time you try to launch a WebXR experience on a specific domain, the browser asks for consent to enter an immersive view, select **Allow**.
 1. Use [HoloLens 2 gestures](hololens2-basic-usage.md#the-hand-tracking-frame) to manipulate the experience.
 1. If the experience doesn't have an **Exit** button, use the [Start gesture](hololens2-basic-usage.md#start-gesture) to return home.
@@ -1481,7 +1557,7 @@ The 360 Viewer extension is built on WebXR and automatically installs alongside 
 1. In the video frame, select the mixed reality headset button:
 
     ![Button to activate 360 Viewer.](images/enter-360-viewer.jpg)
-
+   
 1. The first time you try to launch 360 Viewer on a specific domain, the browser asks for consent to enter an immersive view. Select **Allow**.
 1. [Air tap](hololens2-basic-usage.md#select-using-air-tap) to bring up the playback controls. Use [hand rays and air tap](hololens2-basic-usage.md#select-using-air-tap) to play/pause, skip forward/back, turn captions on/off, or stop the experience (which exits the immersive view). The playback controls disappear after a few seconds of inactivity.
 
@@ -1551,7 +1627,7 @@ With this new setting, you can select an alternative color profile for your Holo
 1. Select buttons 1-6 to instantly try out each color profile, and find one that looks the best to your eyes (this usually means the profile that helps the scene appear most neutral, with the grayscale pattern and skin tones looking as expected.)
 
     ![Display color calibration scene.](images/color-cal-ui.png)
-
+   
 1. When you're happy with the selected profile, select the **Save & Exit** button
 1. If you prefer not to make changes, select the **Cancel & Exit** button and your changes is reverted
 
