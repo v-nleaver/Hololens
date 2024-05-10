@@ -79,6 +79,14 @@ Windows Holographic, version 24H1 is now available and brings a great set of new
 |[Policies to set device standby action](#policies-to-set-device-standby-action)|Policies allow the admin to execute supported actions in modern standby. | IT Admin |
 |[Fixes and improvements](#fixes-and-improvements)  | More fixes and improvements for HoloLens. | All  |
 
+### IT Admin Checklist
+
+✔️ If you want to create a Shared Microsoft Entra account on HoloLens, then see [Shared Microsoft Entra accounts](#shared-microsoft-entra-accounts).
+
+✔️ If you want to configure whether users are prompted for credentials when returning to a device in suspended state, then see [Policy to enable auto unlock](#policy-to-enable-auto-unlock).
+
+✔️ If you want to control the behavior of the device in modern standby, then see [Policies to set device standby action](#policies-to-set-device-standby-action).
+
 ### OpenXR Code Update
 
 The latest release of OpenXR provides the best out-of-box experience for customers without Microsoft store access.  See [OpenXR Tools for Windows Mixed Reality - 113.2403.5001](https://github.com/microsoft/OpenXR-MixedReality/releases/tag/113.2403.5001) for more details on the release.
