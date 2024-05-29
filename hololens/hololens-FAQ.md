@@ -78,7 +78,7 @@ If your holograms don't look right (for example, they're jittery or shaky, or yo
 - Try walking around and gazing at your surroundings so that HoloLens can scan them more completely.
 - If you've placed a lot of holograms, try removing some.
 
-If you're still having problems, try running the Calibration app. This app calibrates your HoloLens just for you to help keep your holograms looking their best. To do that, go to **Settings** > **System**. Under **Calibration**, select **Open Calibration**.
+If you're still having problems, try running the Calibration app. This app calibrates your HoloLens just for you to help keep your holograms looking their best. To do that, go to **Settings** > **System**. Under **Calibration**, select **Run eye calibration**.
 
 [Back to list](#list)
 
@@ -119,8 +119,6 @@ If HoloLens can't map or load your space, it enters Limited mode. When that happ
 - Make sure that you're connected to a Wi-Fi network. If you're not connected to Wi-Fi, HoloLens can't identify and load a known space.
 - Walk around the rooms so HoloLens can rescan your surroundings. To see what's already been scanned, air tap to reveal the mapping mesh graphic.
 - If you need to create a new space, connect to Wi-Fi, then restart your HoloLens.
-- To see if the correct space is active, or to manually load a space, go to **Settings** > **System** > **Holograms**.
-- If the correct space is loaded and you're still having problems, the space may be corrupt. To fix this issue, select the space, then select **Remove**. After you remove the space, HoloLens starts to map your surroundings and create a new space.
 
 [Back to list](#list)
 
@@ -167,7 +165,7 @@ Try walking around and looking at the area where you're placing the app so that 
 1. Get the latest hologram scale and stability fixes by updating to the latest [Windows Holographic OS, (20H2 or higher)](hololens-release-notes-2004.md#windows-holographic-version-20h2). After updating perform the following:
     1. Remove all Holograms via **Settings** app -> **System** -> **Holograms** -> then select **Remove all holograms** and start with a fresh map.
     1. Create a new map of your space by wearing the HoloLens and walking around your room and looking at all areas and surfaces in the space. Do that for 2-3 minutes.
-    1. Perform IPD calibration. Go to **Settings** > **System**. Under **Calibration**, select **Open Calibration**.
+    1. Perform IPD calibration. Go to **Settings** > **System**. Under **Calibration**, select **Run eye calibration**.
     1. Retest the scenario and see if it still persists.
 1. If updating does not fix the issue, file a [Feedback Hub issue](hololens-feedback.md). After you've filled feedback you can use the **Share** button, to create an easy to share link that can be sent when contacting support.
 
