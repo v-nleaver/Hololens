@@ -88,7 +88,7 @@ Pre-Requisites: User already joined the HoloLens 2 device to their work tenant.
 
     ![Work sign in](images/office-pwa-2.jpg)
 
-1. After you have log into your OneDrive web portal, wait for 30 to 60 secs for PWA download button to show up
+1. After you log into your OneDrive web portal, wait for 30 to 60 secs for PWA download button to show up
 
     ![PWA install button](images/office-pwa-3.jpg)
 
