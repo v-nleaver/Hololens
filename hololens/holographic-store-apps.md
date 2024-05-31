@@ -26,11 +26,11 @@ To learn more about installing and running custom apps, read [Custom holographic
 
 ## New look for the store
 
-There is a new version of the Microsoft Store app for the HoloLens 2. This app update occurs seamlessly when the Microsoft Store app itself is updated. When the update is complete, you see a storefront very similar to the store app that is available on desktop. Since this is an app update it is distributed to all HoloLens 2 devices, regardless of OS version.
+There is a new version of the Microsoft Store app for the HoloLens 2. This app update occurs seamlessly when the Microsoft Store app itself is updated. When the update is complete, you see a storefront similar to the store app that is available on desktop. Since this update is an app update it is distributed to all HoloLens 2 devices, regardless of OS version.
 
 ![Image of new store app that became availble in May 2022](images/store-app-hololens2-censored.jpg)
 
-Much of the store's functionality is the same; however some placement of items or changes in icons occurred. One such instance is that the see more button "**...**" was removed. To find your apps and updates you can use the **Library** button.
+Much of the store's functionality is the same; however some placement of items or changes in icons occurred. One such instance is that the see more button "**...**" was removed. To find your apps and updates, use the **Library** button.
 
 ## Find apps
 
@@ -78,7 +78,7 @@ To download apps, you must be signed in with a Microsoft account. Some apps are 
 > [!NOTE]
 > PWA cannot be managed or deployed via Microsoft Intune / MDM.
 
-Pre-Requisites: User has already joined the HoloLens 2 device to their work tenant.
+Pre-Requisites: User already joined the HoloLens 2 device to their work tenant.
 
 1. Open start menu and launch Edge browser.
 
@@ -88,7 +88,7 @@ Pre-Requisites: User has already joined the HoloLens 2 device to their work tena
 
     ![Work sign in](images/office-pwa-2.jpg)
 
-1. Once you have successfully logged into your OneDrive web portal, wait for 30 to 60 secs for PWA download button to show up
+1. After you have log into your OneDrive web portal, wait for 30 to 60 secs for PWA download button to show up
 
     ![PWA install button](images/office-pwa-3.jpg)
 
@@ -103,7 +103,7 @@ Pre-Requisites: User has already joined the HoloLens 2 device to their work tena
     > [!NOTE]
     > The “Microsoft OneDrive” is the PWA app where as “OneDrive” is the older UWP.
 
-1. You'll then be able to see your OneDrive files.
+1. You can then see your OneDrive files.
 
     ![OneDrive PWA](images/office-pwa-6.jpg)
 
@@ -113,11 +113,11 @@ See also: [Enabling automatic uploads to OneDrive for business](hololens-release
 
 ### Manual updates
 
-While apps from the Microsoft Store are kept up to date automatically by the device, sometimes you may want to manually check for updates to get those app updates sooner. This can be done from either the Settings app or the Microsoft Store app.
+While apps from the Microsoft Store are kept up to date automatically by the device, sometimes you may want to manually check for updates to get those app updates sooner. This step can be done from either the Settings app or the Microsoft Store app.
 
 #### Settings app
 
-To manually check for updates to Store apps from the Settings app, go to Apps -> App updates.  This is particularly useful if access to the Microsoft Store is blocked in your environment.
+To manually check for updates to Store apps from the Settings app, go to Apps -> App updates.  This step is particularly useful if access to the Microsoft Store is blocked in your environment.
 
 IT admins are able to block or allow this page with the [Settings/PageVisibilityList policy](/windows/client-management/mdm/policy-csp-settings) with the URI `ms-settings:appupdate`.
 
