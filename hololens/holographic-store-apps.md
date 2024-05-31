@@ -26,11 +26,11 @@ To learn more about installing and running custom apps, read [Custom holographic
 
 ## New look for the store
 
-There is a new version of the Microsoft Store app for the HoloLens 2. This app update will occur seamlessly when the Microsoft Store app itself is updated. When the update is complete, you'll see a storefront very similar to the store app that is available on desktop. Since this is an app update it will be distributed to all HoloLens 2 devices, regardless of OS version.
+There is a new version of the Microsoft Store app for the HoloLens 2. This app update occurs seamlessly when the Microsoft Store app itself is updated. When the update is complete, you see a storefront very similar to the store app that is available on desktop. Since this is an app update it is distributed to all HoloLens 2 devices, regardless of OS version.
 
 ![Image of new store app that became availble in May 2022](images/store-app-hololens2-censored.jpg)
 
-Much of the store's functionality will be the same, however some placement of items or changes in icons has occurred. One such instance is the see more button "**...**" has been removed, and to find your apps and updates you can use the **Library** button.
+Much of the store's functionality is the same; however some placement of items or changes in icons occurred. One such instance is that the see more button "**...**" was removed. To find your apps and updates you can use the **Library** button.
 
 ## Find apps
 
@@ -56,10 +56,10 @@ Open the Microsoft Store from the **Start** menu. Then browse for apps and games
 
 ## Install apps
 
-To download apps, you'll need to be signed in with a Microsoft account. Some apps are free and can be downloaded right away. For apps that require a purchase, you must be signed in to the Store with your Microsoft account and have a valid payment method.
+To download apps, you must be signed in with a Microsoft account. Some apps are free and can be downloaded right away. For apps that require a purchase, you must be signed in to the Store with your Microsoft account and have a valid payment method.
 
 > [!NOTE]
-> The account you use on Microsoft Store does not have to be the same as the account you are signed in with. If you are using a Work or School account on your HoloLens then you may need to sign in with your personal account in the Store App to make a purchase.
+> The account you use on Microsoft Store doesn't have to be the same as the account you are signed in with. If you are using a Work or School account on your HoloLens then you may need to sign in with your personal account in the Store App to make a purchase.
 
 > [!TIP]
 > To set up a payment method, go to [account.microsoft.com](https://account.microsoft.com/) and select **Payment & billing** > **Payment options** > **Add a payment option**.
@@ -121,7 +121,7 @@ To manually check for updates to Store apps from the Settings app, go to Apps ->
 
 IT admins are able to block or allow this page with the [Settings/PageVisibilityList policy](/windows/client-management/mdm/policy-csp-settings) with the URI `ms-settings:appupdate`.
 
-See screenshot below of the Settings app where this feature can be seen.
+See the following screenshot of the Settings app where this feature can be seen.
 
 ![app update from settings](media/holographic-store-apps/app-update-from-settings.png)
 
@@ -200,7 +200,7 @@ On the **Start** menu, select **Settings > Apps.** Find the app from the list, s
    > ![Microsoft Store app screenshot.](images/store-update-1.png)
 
 1. Select **Downloads and updates**.
-    1. If your device has previously identified updates, there may be a down arrow and a number that represents pending updates.
+    1. If your device previously identified updates, there may be a down arrow and a number that represents pending updates.
 
 1. Select **Get updates**. Your device will now search for updates and set them to download and install.
 
